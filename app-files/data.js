@@ -55,9 +55,9 @@ var APP_DATA = {
       ],
       "faceSize": 1472,
       "initialViewParameters": {
-        "yaw": 0.8460444196904877,
-        "pitch": 0,
-        "fov": 1.3545525999327719
+        "yaw": 0.018433852871481804,
+        "pitch": -0.013787373160816685,
+        "fov": 1.1989879464110744
       },
       "linkHotspots": [],
       "infoHotspots": []
@@ -188,7 +188,7 @@ var APP_DATA = {
     },
     {
       "id": "6-drsamuel-martins-bedchamber",
-      "name": "DrSamuel Martins Bedchamber",
+      "name": "Dr. Samuel Martin's Bedchamber",
       "levels": [
         {
           "tileSize": 256,
@@ -250,7 +250,7 @@ var APP_DATA = {
     },
     {
       "id": "8-girl_s-bedchamber",
-      "name": "Girl_s Bedchamber",
+      "name": "Little Girl's Bedchamber",
       "levels": [
         {
           "tileSize": 256,
@@ -374,7 +374,7 @@ var APP_DATA = {
     },
     {
       "id": "12-josiah-martin_s-bedchamber",
-      "name": "Josiah Martin_s Bedchamber",
+      "name": "Josiah Martin's Bedchamber",
       "levels": [
         {
           "tileSize": 256,
@@ -405,7 +405,7 @@ var APP_DATA = {
     },
     {
       "id": "13-n-elevation",
-      "name": "N Elevation",
+      "name": "North Elevation",
       "levels": [
         {
           "tileSize": 256,
@@ -436,7 +436,7 @@ var APP_DATA = {
     },
     {
       "id": "14-s-elevationjpg",
-      "name": "S ElevationJPG",
+      "name": "South Elevation",
       "levels": [
         {
           "tileSize": 256,
@@ -498,7 +498,7 @@ var APP_DATA = {
     },
     {
       "id": "16-w-elevation",
-      "name": "W Elevation",
+      "name": "West Elevation",
       "levels": [
         {
           "tileSize": 256,
@@ -562,7 +562,7 @@ var APP_DATA = {
   "name": "Rock Hall Virtual Tour",
   "settings": {
     "mouseViewMode": "drag",
-    "autorotateEnabled": true,
+    "autorotateEnabled": false,
     "fullscreenButton": true,
     "viewControlButtons": true
   }
