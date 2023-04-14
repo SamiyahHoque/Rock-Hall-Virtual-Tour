@@ -28,7 +28,20 @@ var APP_DATA = {
         "yaw": 0,
         "fov": 1.5707963267948966
       },
-      "linkHotspots": [],
+      "linkHotspots": [
+        {
+          "yaw": 3.133542571205476,
+          "pitch": 0.059148679088322,
+          "rotation": 0,
+          "target": "1-1st-fl-hallway"
+        },
+        {
+          "yaw": 0.949554350537074,
+          "pitch": 0.04711946952219037,
+          "rotation": 0.7853981633974483,
+          "target": "9-guest-parlor"
+        }
+      ],
       "infoHotspots": []
     },
     {
@@ -55,11 +68,60 @@ var APP_DATA = {
       ],
       "faceSize": 1472,
       "initialViewParameters": {
-        "yaw": 0.018433852871481804,
-        "pitch": -0.013787373160816685,
-        "fov": 1.1989879464110744
+        "yaw": 0,
+        "pitch": 0,
+        "fov": 1.3108730938557924
       },
-      "linkHotspots": [],
+      "linkHotspots": [
+        {
+          "yaw": -1.6390973276768364,
+          "pitch": 0.07877561063993355,
+          "rotation": 0,
+          "target": "0-1st-fl-dining-room"
+        },
+        {
+          "yaw": -0.3352252986948656,
+          "pitch": -0.010227890751608015,
+          "rotation": 10.995574287564278,
+          "target": "9-guest-parlor"
+        },
+        {
+          "yaw": 2.529332624827793,
+          "pitch": 0.05957269939515086,
+          "rotation": 5.497787143782138,
+          "target": "12-josiah-martin_s-bedchamber"
+        },
+        {
+          "yaw": 0.3522507992764883,
+          "pitch": -0.0158154216214772,
+          "rotation": 7.853981633974483,
+          "target": "7-family-parlor"
+        },
+        {
+          "yaw": -2.327021539733245,
+          "pitch": -0.17360886821478694,
+          "rotation": 5.497787143782138,
+          "target": "2-2nd-fl-hallway"
+        },
+        {
+          "yaw": 3.1285275764656806,
+          "pitch": -0.00838684234191156,
+          "rotation": 0,
+          "target": "14-s-elevationjpg"
+        },
+        {
+          "yaw": 0.013292018390394844,
+          "pitch": -0.019865580020516305,
+          "rotation": 0,
+          "target": "13-n-elevation"
+        },
+        {
+          "yaw": -2.9178837221478116,
+          "pitch": 0.005891393855216975,
+          "rotation": 1.5707963267948966,
+          "target": "5-cellar-hallway"
+        }
+      ],
       "infoHotspots": []
     },
     {
@@ -90,7 +152,44 @@ var APP_DATA = {
         "yaw": 0,
         "fov": 1.5707963267948966
       },
-      "linkHotspots": [],
+      "linkHotspots": [
+        {
+          "yaw": -0.03968520395308062,
+          "pitch": 0.21185471116930543,
+          "rotation": 3.141592653589793,
+          "target": "1-1st-fl-hallway"
+        },
+        {
+          "yaw": -2.05263005231469,
+          "pitch": 0.03428305925909392,
+          "rotation": 0,
+          "target": "10-hewlett-guest-room"
+        },
+        {
+          "yaw": -0.9897603673609261,
+          "pitch": 0.08367980878498216,
+          "rotation": 0,
+          "target": "11-hewlett-memorabilia-room"
+        },
+        {
+          "yaw": 1.055125692212176,
+          "pitch": 0.07141312174754333,
+          "rotation": 6.283185307179586,
+          "target": "6-drsamuel-martins-bedchamber"
+        },
+        {
+          "yaw": 2.175978904413581,
+          "pitch": 0.018022509480896787,
+          "rotation": 0,
+          "target": "8-girl_s-bedchamber"
+        },
+        {
+          "yaw": -3.0724924848908906,
+          "pitch": 0.0068546153650821395,
+          "rotation": 0,
+          "target": "15-study"
+        }
+      ],
       "infoHotspots": []
     },
     {
@@ -121,7 +220,14 @@ var APP_DATA = {
         "yaw": 0,
         "fov": 1.5707963267948966
       },
-      "linkHotspots": [],
+      "linkHotspots": [
+        {
+          "yaw": 2.240525750224359,
+          "pitch": 0.027670997871489078,
+          "rotation": 7.0685834705770345,
+          "target": "5-cellar-hallway"
+        }
+      ],
       "infoHotspots": []
     },
     {
@@ -152,7 +258,14 @@ var APP_DATA = {
         "yaw": 0,
         "fov": 1.5707963267948966
       },
-      "linkHotspots": [],
+      "linkHotspots": [
+        {
+          "yaw": 1.0908210585165037,
+          "pitch": 0.04546769047748711,
+          "rotation": 0,
+          "target": "5-cellar-hallway"
+        }
+      ],
       "infoHotspots": []
     },
     {
@@ -183,7 +296,32 @@ var APP_DATA = {
         "yaw": 0,
         "fov": 1.5707963267948966
       },
-      "linkHotspots": [],
+      "linkHotspots": [
+        {
+          "yaw": 0.18917909188999538,
+          "pitch": -0.017356878116334684,
+          "rotation": 0,
+          "target": "1-1st-fl-hallway"
+        },
+        {
+          "yaw": 1.179524455840907,
+          "pitch": 0.06250460343696496,
+          "rotation": 0,
+          "target": "4-cellar-gift-shop"
+        },
+        {
+          "yaw": 2.5437630501665645,
+          "pitch": 0.011704154880892048,
+          "rotation": 17.27875959474387,
+          "target": "17-warming-kitchen"
+        },
+        {
+          "yaw": -2.439828326014039,
+          "pitch": 0.018829299916811593,
+          "rotation": 1.5707963267948966,
+          "target": "3-archaeology-exhibit"
+        }
+      ],
       "infoHotspots": []
     },
     {
@@ -214,7 +352,14 @@ var APP_DATA = {
         "yaw": 0,
         "fov": 1.5707963267948966
       },
-      "linkHotspots": [],
+      "linkHotspots": [
+        {
+          "yaw": 1.2521260382965043,
+          "pitch": 0.017805874565487656,
+          "rotation": 0,
+          "target": "2-2nd-fl-hallway"
+        }
+      ],
       "infoHotspots": []
     },
     {
@@ -245,12 +390,25 @@ var APP_DATA = {
         "yaw": 0,
         "fov": 1.5707963267948966
       },
-      "linkHotspots": [],
+      "linkHotspots": [
+        {
+          "yaw": -0.002945676075119863,
+          "pitch": 0.06471383546154819,
+          "rotation": 0,
+          "target": "12-josiah-martin_s-bedchamber"
+        },
+        {
+          "yaw": 2.0004804846215904,
+          "pitch": 0.021231177622235364,
+          "rotation": 18.06415775814132,
+          "target": "1-1st-fl-hallway"
+        }
+      ],
       "infoHotspots": []
     },
     {
       "id": "8-girl_s-bedchamber",
-      "name": "Little Girl's Bedchamber",
+      "name": "Girl's Bedchamber",
       "levels": [
         {
           "tileSize": 256,
@@ -276,7 +434,14 @@ var APP_DATA = {
         "yaw": 0,
         "fov": 1.5707963267948966
       },
-      "linkHotspots": [],
+      "linkHotspots": [
+        {
+          "yaw": -2.7996758608314707,
+          "pitch": -0.03943621469020897,
+          "rotation": 0,
+          "target": "2-2nd-fl-hallway"
+        }
+      ],
       "infoHotspots": []
     },
     {
@@ -307,7 +472,20 @@ var APP_DATA = {
         "yaw": 0,
         "fov": 1.5707963267948966
       },
-      "linkHotspots": [],
+      "linkHotspots": [
+        {
+          "yaw": -1.5273248527186833,
+          "pitch": 0.017784434660780946,
+          "rotation": 18.84955592153877,
+          "target": "0-1st-fl-dining-room"
+        },
+        {
+          "yaw": 2.888928888290663,
+          "pitch": 0.017514780431630683,
+          "rotation": 0,
+          "target": "1-1st-fl-hallway"
+        }
+      ],
       "infoHotspots": []
     },
     {
@@ -338,7 +516,14 @@ var APP_DATA = {
         "yaw": 0,
         "fov": 1.5707963267948966
       },
-      "linkHotspots": [],
+      "linkHotspots": [
+        {
+          "yaw": -0.694895910572118,
+          "pitch": 0.02802581376558777,
+          "rotation": 0,
+          "target": "2-2nd-fl-hallway"
+        }
+      ],
       "infoHotspots": []
     },
     {
@@ -369,7 +554,14 @@ var APP_DATA = {
         "yaw": 0,
         "fov": 1.5707963267948966
       },
-      "linkHotspots": [],
+      "linkHotspots": [
+        {
+          "yaw": 0.2867601840356606,
+          "pitch": 0.04764959680505498,
+          "rotation": 0,
+          "target": "2-2nd-fl-hallway"
+        }
+      ],
       "infoHotspots": []
     },
     {
@@ -400,12 +592,25 @@ var APP_DATA = {
         "yaw": 0,
         "fov": 1.5707963267948966
       },
-      "linkHotspots": [],
+      "linkHotspots": [
+        {
+          "yaw": 2.793068830865689,
+          "pitch": 0.01718456005136204,
+          "rotation": 0,
+          "target": "1-1st-fl-hallway"
+        },
+        {
+          "yaw": -1.3953915543755038,
+          "pitch": 0.09882100200540123,
+          "rotation": 0,
+          "target": "7-family-parlor"
+        }
+      ],
       "infoHotspots": []
     },
     {
       "id": "13-n-elevation",
-      "name": "North Elevation",
+      "name": "N Elevation",
       "levels": [
         {
           "tileSize": 256,
@@ -431,12 +636,25 @@ var APP_DATA = {
         "yaw": 0,
         "fov": 1.5707963267948966
       },
-      "linkHotspots": [],
+      "linkHotspots": [
+        {
+          "yaw": -0.05884537776003462,
+          "pitch": 0.035272101688921254,
+          "rotation": 0,
+          "target": "1-1st-fl-hallway"
+        },
+        {
+          "yaw": 0.6958540978775112,
+          "pitch": 0.029471390269794284,
+          "rotation": 5.497787143782138,
+          "target": "16-w-elevation"
+        }
+      ],
       "infoHotspots": []
     },
     {
       "id": "14-s-elevationjpg",
-      "name": "South Elevation",
+      "name": "S Elevation",
       "levels": [
         {
           "tileSize": 256,
@@ -462,7 +680,20 @@ var APP_DATA = {
         "yaw": 0,
         "fov": 1.5707963267948966
       },
-      "linkHotspots": [],
+      "linkHotspots": [
+        {
+          "yaw": 3.0527320370550406,
+          "pitch": -0.019671196162379445,
+          "rotation": 0,
+          "target": "1-1st-fl-hallway"
+        },
+        {
+          "yaw": 2.394603314875976,
+          "pitch": -0.009480375796025342,
+          "rotation": 5.497787143782138,
+          "target": "16-w-elevation"
+        }
+      ],
       "infoHotspots": []
     },
     {
@@ -493,12 +724,19 @@ var APP_DATA = {
         "yaw": 0,
         "fov": 1.5707963267948966
       },
-      "linkHotspots": [],
+      "linkHotspots": [
+        {
+          "yaw": 0.06203605156309955,
+          "pitch": 0.08429257249048128,
+          "rotation": 0,
+          "target": "2-2nd-fl-hallway"
+        }
+      ],
       "infoHotspots": []
     },
     {
       "id": "16-w-elevation",
-      "name": "West Elevation",
+      "name": "W Elevation",
       "levels": [
         {
           "tileSize": 256,
@@ -524,7 +762,20 @@ var APP_DATA = {
         "yaw": 0,
         "fov": 1.5707963267948966
       },
-      "linkHotspots": [],
+      "linkHotspots": [
+        {
+          "yaw": 1.8802352601028982,
+          "pitch": 0.056643293101037884,
+          "rotation": 0.7853981633974483,
+          "target": "13-n-elevation"
+        },
+        {
+          "yaw": -1.8315484907388466,
+          "pitch": 0.02824550288733718,
+          "rotation": 11.780972450961727,
+          "target": "14-s-elevationjpg"
+        }
+      ],
       "infoHotspots": []
     },
     {
@@ -555,7 +806,14 @@ var APP_DATA = {
         "yaw": 0,
         "fov": 1.5707963267948966
       },
-      "linkHotspots": [],
+      "linkHotspots": [
+        {
+          "yaw": 1.6343526397175552,
+          "pitch": -0.018754530695984428,
+          "rotation": 4.71238898038469,
+          "target": "5-cellar-hallway"
+        }
+      ],
       "infoHotspots": []
     }
   ],
