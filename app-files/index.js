@@ -392,6 +392,8 @@
   // audio element
   var playAudioButton = document.getElementById("soundPlay");
   var audio;
+  var checkAudioInterval;
+  var currentScene;
   // var audioPlaying = false;
   playAudioButton.addEventListener("click", function() {
     
@@ -401,24 +403,69 @@
     switch (sceneName) {
       case 'Girl\'s Bedchamber':
         audio = document.getElementById("Girls-audio");
+        // Set an interval to check the current time of the audio and pause it if needed
+        checkAudioInterval = setInterval(function() {
+          // currentScene = document.querySelector('#titleBar .sceneName').innerHTML;
+          // if(currentScene != sceneName) {
+          //   audio.pause();
+          //   audio.currentTime = 0;
+          // }
+
+          if (audio.currentTime >= pauseTime) {
+            audio.pause();
+            clearInterval(checkAudioInterval);
+          }
+        }, 100); // check every 100 milliseconds
         audio.paused ? audio.play() : audio.pause();
-        console.log("\nsceneName:" + sceneName + " \n\nPaused? " + audio.paused + "\n");
-        break;
+        console.log("Playing audio for " + sceneName);
+        console.log("Audio paused? " + audio.paused);        break;
       case 'Dr. Samuel Martin\'s Bedchamber':
         audio = document.getElementById("Samuel-audio");
+        checkAudioInterval = setInterval(function() {
+          if (audio.currentTime >= pauseTime) {
+            audio.pause();
+            clearInterval(checkAudioInterval);
+          }
+        }, 100); // check every 100 milliseconds
         audio.paused ? audio.play() : audio.pause();
+        console.log("Playing audio for " + sceneName);
+        console.log("Audio paused? " + audio.paused);
         break;
       case 'Family Parlor':
         audio = document.getElementById("Parlor-audio");
+        checkAudioInterval = setInterval(function() {
+          if (audio.currentTime >= pauseTime) {
+            audio.pause();
+            clearInterval(checkAudioInterval);
+          }
+        }, 100); // check every 100 milliseconds
         audio.paused ? audio.play() : audio.pause();
+        console.log("Playing audio for " + sceneName);
+        console.log("Audio paused? " + audio.paused);
         break;
       case 'Study':
         audio = document.getElementById("Study-audio");
+        checkAudioInterval = setInterval(function() {
+          if (audio.currentTime >= pauseTime) {
+            audio.pause();
+            clearInterval(checkAudioInterval);
+          }
+        }, 100); // check every 100 milliseconds
         audio.paused ? audio.play() : audio.pause();
+        console.log("Playing audio for " + sceneName);
+        console.log("Audio paused? " + audio.paused);
         break;
       case 'Hewlett Memorabilia Room':
         audio = document.getElementById("Hewlett-audio");
+        checkAudioInterval = setInterval(function() {
+          if (audio.currentTime >= pauseTime) {
+            audio.pause();
+            clearInterval(checkAudioInterval);
+          }
+        }, 100); // check every 100 milliseconds
         audio.paused ? audio.play() : audio.pause();
+        console.log("Playing audio for " + sceneName);
+        console.log("Audio paused? " + audio.paused);
         break;
       default:
         console.log("\n\n No recording for this room....\n\n")
@@ -428,7 +475,6 @@
     //Complete: Registering audio files in html
 
     //Incomplete
-    //how to distinguish and determine which panorama room you are in 
     //user should be able to toggle so we need a boolean for when it is playing or not
     //user option to read transcript instead
     //disable if the current room does not have a recording belonging to it
