@@ -266,6 +266,7 @@
     // Add click event handler.
     wrapper.addEventListener('click', function() {
       switchScene(findSceneById(hotspot.target));
+      console.log(findSceneById(hotspot.target).data.name);
     });
 
     // Prevent touch and scroll events from reaching the parent element.
@@ -385,6 +386,54 @@
     }
     return null;
   }
+
+
+  //  var sceneNameElement = document.querySelector('#titleBar .sceneName');
+  // audio element
+  var playAudioButton = document.getElementById("soundPlay");
+  var audio;
+  // var audioPlaying = false;
+  playAudioButton.addEventListener("click", function() {
+    
+    // audioPlaying = !audioPlaying;
+    var sceneName = document.querySelector('#titleBar .sceneName').innerHTML;
+    // Play the corresponding audio based on the current scene.
+    switch (sceneName) {
+      case 'Girl\'s Bedchamber':
+        audio = document.getElementById("Girls-audio");
+        audio.paused ? audio.play() : audio.pause();
+        console.log("\nsceneName:" + sceneName + " \n\nPaused? " + audio.paused + "\n");
+        break;
+      case 'Dr. Samuel Martin\'s Bedchamber':
+        audio = document.getElementById("Samuel-audio");
+        audio.paused ? audio.play() : audio.pause();
+        break;
+      case 'Family Parlor':
+        audio = document.getElementById("Parlor-audio");
+        audio.paused ? audio.play() : audio.pause();
+        break;
+      case 'Study':
+        audio = document.getElementById("Study-audio");
+        audio.paused ? audio.play() : audio.pause();
+        break;
+      case 'Hewlett Memorabilia Room':
+        audio = document.getElementById("Hewlett-audio");
+        audio.paused ? audio.play() : audio.pause();
+        break;
+      default:
+        console.log("\n\n No recording for this room....\n\n")
+    }
+    
+
+    //Complete: Registering audio files in html
+
+    //Incomplete
+    //how to distinguish and determine which panorama room you are in 
+    //user should be able to toggle so we need a boolean for when it is playing or not
+    //user option to read transcript instead
+    //disable if the current room does not have a recording belonging to it
+  });
+
 
   // Display the initial scene.
   switchScene(scenes[1]);
