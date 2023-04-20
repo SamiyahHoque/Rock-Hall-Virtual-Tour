@@ -415,7 +415,12 @@ var APP_DATA = {
         }
       ],
       "infoHotspots": [
-        
+        {
+          "yaw" : 1,
+          "pitch" : 3.35,
+          "title" : "Deft Blue and White Plates", //description is kind of confusing on this one, is dr wall a collection of some sort? - gretta
+          "text" : "These deft blue and white plates are from the 18th century. They are a Dr. Wall Worchester Blue and white porcelain five-piece mantle garniture."
+        }
       ]
     },
     {
@@ -462,6 +467,7 @@ var APP_DATA = {
           "text" : "Modern reproduction of 18th century pewter candlesticks."
         }
       ]
+
     },
     {
       "id": "9-guest-parlor",
@@ -506,6 +512,19 @@ var APP_DATA = {
         }
       ],
       "infoHotspots": [
+        {
+          "yaw" : 8.25,
+          "pitch" : 3.1,
+          "title" : "Regency Carved, Ebonized & Gilt Harp",
+          "text" : "The Regency Carved, Ebonized and Gilt Harp was manufactured by J.C. Strumpff in London, ca. 1800. It is one of the few original furnishings belonging to the Martin family. The framework consists of a fluted column with a ram's head capital."
+        },
+        {
+          "yaw" : 0.5,
+          "pitch" : 3,
+          "title" : "George III Inlaid Satinwood and Mahogany Broadwood Piano",
+          "text" : "The George III Inlaid Satinwood and Mahogany Broadwood piano forte is dated ca. 1792 and made by Joahannes Broadwood in London. Consists of a plain cross-banded case with a framework of square legs; re-strung for 1975 bicentennial."
+        }
+        
       ]
     },
     {
@@ -766,7 +785,20 @@ var APP_DATA = {
           "target": "2-2nd-fl-hallway"
         }
       ],
-      "infoHotspots": []
+      "infoHotspots": [
+        {
+          "yaw" : 3.15,
+          "pitch" : -0.2,
+          "title" : "Medical Apothecary Chest",
+          "text" : "Made by White. From 1823, large chest with front doors opening out. Each door contains seven bottles, most of which are original to the Martins. The top drawer lifts up to reveal larger bottles, while another drawer contains scales, measuring cups, and more.",
+        },
+        {
+          "yaw" : 3.27,
+          "pitch" : 0.1,
+          "title" : "Culpepper Microscope",
+          "text" : "Possibly made by Benjamin Col. From 1870, brass lacquer finished and mounted on a wooden base with a drawer containing accessories. The whole is contained in a pyramidal box with a metal plaque."
+        }
+      ]
     },
     {
       "id": "16-w-elevation",
