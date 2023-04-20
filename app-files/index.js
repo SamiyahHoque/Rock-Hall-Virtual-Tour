@@ -397,7 +397,6 @@
   // var audioPlaying = false;
   playAudioButton.addEventListener("click", function() {
     
-    // audioPlaying = !audioPlaying;
     var sceneName = document.querySelector('#titleBar .sceneName').innerHTML;
     // Play the corresponding audio based on the current scene.
     switch (sceneName) {
@@ -405,20 +404,16 @@
         audio = document.getElementById("Girls-audio");
         // Set an interval to check the current time of the audio and pause it if needed
         checkAudioInterval = setInterval(function() {
-          // currentScene = document.querySelector('#titleBar .sceneName').innerHTML;
-          // if(currentScene != sceneName) {
-          //   audio.pause();
-          //   audio.currentTime = 0;
-          // }
 
           if (audio.currentTime >= pauseTime) {
             audio.pause();
             clearInterval(checkAudioInterval);
           }
-        }, 100); // check every 100 milliseconds
+        }, 100); // check every 100 milliseconds 
         audio.paused ? audio.play() : audio.pause();
         console.log("Playing audio for " + sceneName);
-        console.log("Audio paused? " + audio.paused);        break;
+        console.log("Audio paused? " + audio.paused);        
+        break;
       case 'Dr. Samuel Martin\'s Bedchamber':
         audio = document.getElementById("Samuel-audio");
         checkAudioInterval = setInterval(function() {

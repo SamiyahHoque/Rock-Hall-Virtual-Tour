@@ -831,3 +831,10 @@ body.view-control-buttons .viewControlButton {
 .viewControlButton-7 {
   margin-left: 155px;
 }
+.viewControlButton-8 {
+  margin-left: 205px;
+}
+
+.hidden {
+  display: none;
+}
