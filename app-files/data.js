@@ -42,7 +42,8 @@ var APP_DATA = {
           "target": "9-guest-parlor"
         }
       ],
-      "infoHotspots": []
+      "infoHotspots": [
+      ]
     },
     {
       "id": "1-1st-fl-hallway",
@@ -190,7 +191,8 @@ var APP_DATA = {
           "target": "15-study"
         }
       ],
-      "infoHotspots": []
+      "infoHotspots": [
+      ]
     },
     {
       "id": "3-archaeology-exhibit",
@@ -360,7 +362,15 @@ var APP_DATA = {
           "target": "2-2nd-fl-hallway"
         }
       ],
-      "infoHotspots": []
+      "infoHotspots": [
+        {
+          "yaw": 4.25,
+          "pitch": 0.2,
+          "title": "White Linen Men's Shirt",
+          "text": "Served as both underwear and outerwear. The shirt fits loosely with long, full sleeves. It opens with a deep slit down the front, with a soft collar that buttons down at the neck."
+        }
+      ]
+
     },
     {
       "id": "7-family-parlor",
@@ -404,7 +414,9 @@ var APP_DATA = {
           "target": "1-1st-fl-hallway"
         }
       ],
-      "infoHotspots": []
+      "infoHotspots": [
+        
+      ]
     },
     {
       "id": "8-girl_s-bedchamber",
@@ -442,7 +454,14 @@ var APP_DATA = {
           "target": "2-2nd-fl-hallway"
         }
       ],
-      "infoHotspots": []
+      "infoHotspots": [
+        {
+          "yaw" : 6.35,
+          "pitch" : 6,
+          "title" : "Pewter Candlesticks",
+          "text" : "Modern reproduction of 18th century pewter candlesticks."
+        }
+      ]
     },
     {
       "id": "9-guest-parlor",
@@ -486,7 +505,8 @@ var APP_DATA = {
           "target": "1-1st-fl-hallway"
         }
       ],
-      "infoHotspots": []
+      "infoHotspots": [
+      ]
     },
     {
       "id": "10-hewlett-guest-room",
@@ -524,7 +544,14 @@ var APP_DATA = {
           "target": "2-2nd-fl-hallway"
         }
       ],
-      "infoHotspots": []
+      "infoHotspots": [
+        {
+          "yaw" : 8.95,
+          "pitch" : 0.5,
+          "title" : "Tin Wash Tub",
+          "text" : "Tin wash tub with arm rests, from a long term loan from he Society for the Preservation of Long Island Antiquities (SPLIA), which is now called Preservation Long Island."
+        }
+      ]
     },
     {
       "id": "11-hewlett-memorabilia-room",
@@ -606,7 +633,14 @@ var APP_DATA = {
           "target": "7-family-parlor"
         }
       ],
-      "infoHotspots": []
+      "infoHotspots": [
+        {
+          "yaw": 6.45,
+          "pitch": 0.3,
+          "title": "Painted Pine Chess Board",
+          "text": "American Chess Board, dating back to the 19th century. Includes a set of white and red carved ivory chessmen. Chessmen are possibly imported from China, dating back to the late 19th or 20th century."
+        }
+      ]
     },
     {
       "id": "13-n-elevation",
@@ -814,7 +848,14 @@ var APP_DATA = {
           "target": "5-cellar-hallway"
         }
       ],
-      "infoHotspots": []
+      "infoHotspots": [
+        {
+          "yaw" : 6.25,
+          "pitch" : 0,
+          "title" : "China Cabinet",
+          "text" : "Reproduction of a pine dresser, made in 2000."
+        }
+      ]
     }
   ],
   "name": "Rock Hall Virtual Tour",
