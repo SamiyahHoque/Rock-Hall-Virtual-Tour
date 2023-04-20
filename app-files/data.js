@@ -192,6 +192,12 @@ var APP_DATA = {
         }
       ],
       "infoHotspots": [
+        {
+          "yaw": -1.53,
+          "pitch":-0.1,
+          "title": "Grandfather Clock",
+          "text":"Federal Carved Mahogany and Ivory-Mounted Tall-Case Clock, probably made in Massachusetts, 1800 through 1815. Consists of arched hood with an open scroll cornice and three turned ivory urn finials above a painted and decorated dial. The trunk with a cross-banded cupboard door flanked by reeded quarter-round stiles also contains an ivory fitting.",
+        }
       ]
     },
     {
@@ -230,7 +236,14 @@ var APP_DATA = {
           "target": "5-cellar-hallway"
         }
       ],
-      "infoHotspots": []
+      "infoHotspots": [
+        {
+          "yaw": 1.5,
+          "pitch": 0.15,
+          "title": "Dug Artifacts.",
+          "text": "Artifacts found under the front and back porch, a story about the excavation process.",
+        }
+      ]
     },
     {
       "id": "4-cellar-gift-shop",
@@ -465,6 +478,12 @@ var APP_DATA = {
           "pitch" : 6,
           "title" : "Pewter Candlesticks",
           "text" : "Modern reproduction of 18th century pewter candlesticks."
+        },
+        {
+          "yaw" : 3.97,
+          "pitch" : 6.1,
+          "title" : "Embroidery",
+          "text" : "Silk on Linen, 1797 by Alice Hermione Pelham Banister (1787-1823). Alice was the daughter of Rachel Martin (1750-1817) of Rock Hall and Thomas Banister (1750-1826) of Newport. Her embroidered sampler would have been displayed proudly for potential suitors, illustrating her wealth, values, and skill. This sampler was created at a private school for young ladies in Rhode Island when Alice was only ten years old."
         }
       ]
 
@@ -797,7 +816,20 @@ var APP_DATA = {
           "pitch" : 0.1,
           "title" : "Culpepper Microscope",
           "text" : "Possibly made by Benjamin Col. From 1870, brass lacquer finished and mounted on a wooden base with a drawer containing accessories. The whole is contained in a pyramidal box with a metal plaque."
+        },
+        {
+          "yaw" : 3.15,
+          "pitch" : 0.2,
+          "title" : "Pocket Surgical Set",
+          "text" : "Made by Tiemann. From 1830, the set consists of a leather wallet with scissors, silver catheter, and four scalpels marked Tiemann with bone handles inside."
+        },
+        {
+          "yaw" : 2.8,
+          "pitch" : 0.2,
+          "title" : "Tooth Key",
+          "text" : "Steel shaft with claw for removing tooth; ivory handled."
         }
+
       ]
     },
     {
