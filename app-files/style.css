@@ -838,3 +838,103 @@ body.view-control-buttons .viewControlButton {
 .hidden {
   display: none;
 }
+
+/* STYLES FOR LANDING SCREEN */
+.intro{
+  display: visible;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-image: url(img/LandingScreen.png);
+  background-color: #757D75;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+}
+
+.tourTitle{
+  color: white;
+  font-family: Garamond, serif;
+  font-size: 56px;
+  position: relative;
+  text-align: center;
+}
+
+.tourSubtext{
+  color: white;
+  font-family: Garamond, serif;
+  font-size: 32px;
+  position: relative;
+  text-align: center;
+}
+
+.landingButton {
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 10%;
+  height: 30%;
+  background:#1F4788;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.landingButton span {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}.landingButton span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}.landingButton:hover span {
+  padding-right: 25px;
+}.landingButton:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.startingRow {
+  display: flex;
+  justify-content: space-around; 
+  width: 100%;
+  height: 30%;
+  align-items: flex-end;
+}
+
+.startingRow:a {
+  width: auto;
+}
+
+.endingRow {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 3%;
+  width: 100%;
+  height: 10%;
+}
+
+.logo{
+  padding: 10px;
+  height: 100%;
+}
+
+#clock {
+ position: fixed;
+ width: 45%;
+ height: auto;
+ opacity: 0.9;
+ bottom: 15%; 
+}

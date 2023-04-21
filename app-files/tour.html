@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Rock Hall Virtual Tour</title>
+<meta charset="utf-8">
+<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
+<style> @-ms-viewport { width: device-width; } </style>
+<link rel="stylesheet" href="vendor/reset.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="multiple-scenes view-control-buttons">
+
+<div id="pano"></div>
+
+<div id="sceneList">
+  <ul class="scenes">
+    
+      <a href="javascript:void(0)" class="scene" data-id="0-1st-fl-dining-room">
+        <li class="text">1st Fl Dining Room</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="1-1st-fl-hallway">
+        <li class="text">1st Fl Hallway</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="2-2nd-fl-hallway">
+        <li class="text">2nd Fl Hallway</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="3-archaeology-exhibit">
+        <li class="text">Archaeology Exhibit</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="4-cellar-gift-shop">
+        <li class="text">Cellar Gift Shop</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="5-cellar-hallway">
+        <li class="text">Cellar Hallway</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="6-drsamuel-martins-bedchamber">
+        <li class="text">Dr. Samuel Martin's Bedchamber</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="7-family-parlor">
+        <li class="text">Family Parlor</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="8-girl_s-bedchamber">
+        <li class="text">Girl's Bedchamber</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="9-guest-parlor">
+        <li class="text">Guest Parlor</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="10-hewlett-guest-room">
+        <li class="text">Hewlett Guest Room</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="11-hewlett-memorabilia-room">
+        <li class="text">Hewlett Memorabilia Room</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="12-josiah-martin_s-bedchamber">
+        <li class="text">Josiah Martin's Bedchamber</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="13-n-elevation">
+        <li class="text">N Elevation</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="14-s-elevationjpg">
+        <li class="text">S Elevation</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="15-study">
+        <li class="text">Study</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="16-w-elevation">
+        <li class="text">W Elevation</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="17-warming-kitchen">
+        <li class="text">Warming Kitchen</li>
+      </a>
+    
+  </ul>
+</div>
+
+<div id="titleBar">
+  <h1 class="sceneName"></h1>
+</div>
+
+<a href="javascript:void(0)" id="autorotateToggle">
+  <img class="icon off" src="img/play.png">
+  <img class="icon on" src="img/pause.png">
+</a>
+
+<a href="javascript:void(0)" id="fullscreenToggle">
+  <img class="icon off" src="img/fullscreen.png">
+  <img class="icon on" src="img/windowed.png">
+</a>
+
+<a href="javascript:void(0)" id="sceneListToggle">
+  <img class="icon off" src="img/expand.png">
+  <img class="icon on" src="img/collapse.png">
+</a>
+
+<a href="javascript:void(0)" id="viewUp" class="viewControlButton viewControlButton-1">
+  <img class="icon" src="img/up.png">
+</a>
+<a href="javascript:void(0)" id="viewDown" class="viewControlButton viewControlButton-2">
+  <img class="icon" src="img/down.png">
+</a>
+<a href="javascript:void(0)" id="viewLeft" class="viewControlButton viewControlButton-3">
+  <img class="icon" src="img/left.png">
+</a>
+<a href="javascript:void(0)" id="viewRight" class="viewControlButton viewControlButton-4">
+  <img class="icon" src="img/right.png">
+</a>
+<a href="javascript:void(0)" id="viewIn" class="viewControlButton viewControlButton-5">
+  <img class="icon" src="img/plus.png">
+</a>
+<a href="javascript:void(0)" id="viewOut" class="viewControlButton viewControlButton-6">
+  <img class="icon" src="img/minus.png">
+</a>
+<a href="javascript:void(0)" id="soundPlay" class="viewControlButton viewControlButton-7">
+  <!-- <img class="icon" src="img/sound.png"> -->
+  <img class="icon" src="img/sound.png">
+</a>
+<button id="toggle-btn" class="viewControlButton viewControlButton-8">Audio Text</button>
+
+
+
+<!-- REGISTER AUDIO FILES -->
+
+<audio id="Girls-audio">
+  <source src="recordings/001 Girls Room .wav" type="audio/wav">
+</audio>
+<audio id="Samuel-audio">
+  <source src="recordings/001 RD_Dr Samuel Martin 8bit.wav" type="audio/wav">
+</audio>
+<audio id="Parlor-audio">
+  <source src="recordings/001_Family Parlor 8bit final.wav" type="audio/wav">
+</audio>
+<audio id="Study-audio">
+  <source src="recordings/001_Sam_s Study.wav" type="audio/wav">
+</audio>
+<audio id="Hewlett-audio">
+  <source src="recordings/Thomas Hewlett 8bit final.wav" type="audio/wav">
+</audio>
+
+
+
+
+
+
+<script src="vendor/screenfull.min.js" ></script>
+<script src="vendor/bowser.min.js" ></script>
+<script src="vendor/marzipano.js" ></script>
+
+<script src="data.js"></script>
+<script src="index.js"></script>
+
+</body>
+</html>
