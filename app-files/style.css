@@ -837,9 +837,13 @@ body.view-control-buttons .viewControlButton {
   margin-left: 205px;
 }
 
-.hidden {
-  display: none;
+
+#audio-transcript {
+
+  visibility: none;
+  display: block;
 }
+
 
 /* STYLES FOR LANDING SCREEN */
 .intro{
