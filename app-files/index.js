@@ -506,32 +506,37 @@
     switch (sceneName) {
       case 'Girl\'s Bedchamber':
         textBox.style.display === "none" ? textBox.style.display = "visible" : textBox.style.display = "none";
-        audiotxt.textContent = audioTranscriptDetails[sceneName];
+        audiotxt.innerHTML = audioTranscriptDetails[sceneName];
         break;
       case 'Dr. Samuel Martin\'s Bedchamber':
         textBox.style.display === "none" ? textBox.style.display = "visible" : textBox.style.display = "none";
-        audiotxt.textContent = audioTranscriptDetails[sceneName];
+        audiotxt.innerHTML = audioTranscriptDetails[sceneName];
         break;
       case 'Family Parlor':
         textBox.styles.display === "none" ? textBox.style.display = "visible" : textBox.style.display = "none";
-        audiotxt.textContent = audioTranscriptDetails[sceneName];
+        audiotxt.innerHTML = audioTranscriptDetails[sceneName];
         break;
       case 'Study':
         textBox.style.display === "none" ? textBox.style.display = "visible" : textBox.style.display = "none";
-        audiotxt.textContent = audioTranscriptDetails[sceneName];
+        audiotxt.innerHTML = audioTranscriptDetails[sceneName];
         break;
       case 'Hewlett Guest Room':
         textBox.style.display === "none" ? textBox.style.display = "visible" : textBox.style.display = "none";
-        audiotxt.textContent = audioTranscriptDetails[sceneName];
+        audiotxt.innerHTML = audioTranscriptDetails[sceneName];
         break;
       default:
         if(textBox.style.display != "none") textBox.style.display = "none";
-
         console.log("\n\n No text bc no recording for this room....\n\n")
     }
   });
 
-
+  // function highlightCtrlBtn(id) {
+  //   var button = document.getElementById(id);
+  //   button.classList.add("clicked");
+  //   setTimeout(function() {
+  //     button.classList.remove("clicked");
+  //   }, 200);
+  // }
 
   // Display the initial scene.
   switchScene(scenes[1]);
