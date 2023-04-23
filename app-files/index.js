@@ -297,7 +297,7 @@
     header.classList.add('info-hotspot-header');
 
     // Create image element.
-    var iconWrapper = document.createElement('div');
+    var iconWrapper = document.createElement('div'); 
     iconWrapper.classList.add('info-hotspot-icon-wrapper');
     var icon = document.createElement('img');
     icon.src = 'img/info.png';
@@ -330,8 +330,21 @@
     text.classList.add('info-hotspot-text');
     text.innerHTML = hotspot.text;
 
-    // Place header and text into wrapper element.
+    // check if img src exists
+    if (hotspot.hasOwnProperty("img_src")) {
+      var img_src = document.createElement('div'); 
+      img_src.classList.add('info-hotspot-image-wrapper');
+      var img_property = document.createElement('img');
+      img_property.src = hotspot.img_src;
+      img_property.classList.add('info-hotspot-image');
+      img_src.appendChild(img_property);
+      // if image exists, append to text elem
+      text.appendChild(img_src);
+    }
+
+    // Place header into wrapper element.
     wrapper.appendChild(header);
+    // place text into wrapper element
     wrapper.appendChild(text);
 
     // Create a modal for the hotspot content to appear on mobile mode.
