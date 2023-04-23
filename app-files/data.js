@@ -240,7 +240,7 @@ var APP_DATA = {
         {
           "yaw": 1.5,
           "pitch": 0.15,
-          "title": "Dug Artifacts.",
+          "title": "Dug Artifacts",
           "img_src": "artifacts/under.jpeg",
           "text": "Artifacts found under the front and back porch, a story about the excavation process.",
         }
@@ -542,7 +542,7 @@ var APP_DATA = {
         {
           "yaw" : 0.5,
           "pitch" : 3,
-          "title" : "George III Inlaid Satinwood and Mahogany Broadwood Piano",
+          "title" : "George III's Piano",
           "img_src": "artifacts/GeorgeIII_Piano.png",
           "text" : "The George III Inlaid Satinwood and Mahogany Broadwood piano forte is dated ca. 1792 and made by Joahannes Broadwood in London. Consists of a plain cross-banded case with a framework of square legs; re-strung for 1975 bicentennial."
         }
