@@ -43,6 +43,13 @@ var APP_DATA = {
         }
       ],
       "infoHotspots": [
+        {
+          "yaw": 6.33,
+          "pitch": -0.15,
+          "title": "Hurricane Shade Glass",
+          "img_src": "artifacts/glass.jpeg",
+          "text" : "Hurricane shade, made of glass, from the 18th century."
+        }
       ]
     },
     {
@@ -243,6 +250,13 @@ var APP_DATA = {
           "title": "Dug Artifacts",
           "img_src": "artifacts/under.jpeg",
           "text": "Artifacts found under the front and back porch, a story about the excavation process.",
+        },
+        {
+          "yaw": 2.65,
+          "pitch":-0.1,
+          "title": "Archaeology Comparisons",
+          "img_src": "artifacts/compare.jpeg",
+          "text":"Old and new archaeology comparison.",
         }
       ]
     },
@@ -382,7 +396,15 @@ var APP_DATA = {
           "pitch": 0.2,
           "title": "White Linen Men's Shirt",
           "text": "Served as both underwear and outerwear. The shirt fits loosely with long, full sleeves. It opens with a deep slit down the front, with a soft collar that buttons down at the neck."
+        },
+        {
+          "yaw": 4.48,
+          "pitch": -0.3,
+          "title": "Blue Vase",
+          "img_src": "artifacts/bluevase.jpeg",
+          "text": "Bristol delft blue and white bottle form vase."
         }
+
       ]
 
     },
@@ -434,6 +456,13 @@ var APP_DATA = {
           "pitch" : 3.35,
           "title" : "Deft Blue and White Plates", //description is kind of confusing on this one, is dr wall a collection of some sort? - gretta
           "text" : "These deft blue and white plates are from the 18th century. They are a Dr. Wall Worchester Blue and white porcelain five-piece mantle garniture."
+        },
+        {
+          "yaw" : 8,
+          "pitch" : 3.35,
+          "title" : "Dr. Wall Worchester Vase", 
+          "img_src": "artifacts/vaseDR.jpeg",
+          "text" : "Dr. Wall Worchester mantle garniture."
         }
       ]
     },
@@ -598,7 +627,14 @@ var APP_DATA = {
           "pitch" : 0.5,
           "title" : "Tin Wash Tub",
           "text" : "Tin wash tub with arm rests, from a long term loan from he Society for the Preservation of Long Island Antiquities (SPLIA), which is now called Preservation Long Island."
-        }
+        },
+        {
+          "yaw" : 9.9,
+          "pitch" : 0.17,
+          "title" : "Fireplace Tiles",
+          "img_src": "artifacts/tiles.jpeg",
+          "text" : "Delft tiles illustrating biblical scenes."
+        },
       ]
     },
     {
@@ -637,7 +673,29 @@ var APP_DATA = {
           "target": "2-2nd-fl-hallway"
         }
       ],
-      "infoHotspots": []
+      "infoHotspots": [
+        {
+          "yaw": 4.25,
+          "pitch": 0.1,
+          "title": "Papier-Mache, Metal Dolls",
+          "img_src": "artifacts/dolls.jpeg",
+          "text": "Papier-mache doll from the late 1800's to early 1900's on the left. On the right, blond painted hair and metal head boy doll from Germany, 1850-1899."
+        },
+        {
+          "yaw": 4.65,
+          "pitch": 0.1,
+          "title": "Large Doll",
+          "img_src": "artifacts/largeDoll.jpeg",
+          "text": "From 1879-1884, made by Bru Jne, Ce Paris, and Montreuil-sous- Bois in France."
+        },
+        {
+          "yaw": 3.95,
+          "pitch": -0.3,
+          "title": "Bird Decoy",
+          "img_src": "artifacts/bird.jpeg",
+          "text": "Mitchell Hewlett's decoy, from 1890."
+        }
+      ]
     },
     {
       "id": "12-josiah-martin_s-bedchamber",
@@ -695,6 +753,13 @@ var APP_DATA = {
           "title": "Blew Satin Shoes",
           "img_src": "artifacts/shoes.jpeg",
           "text" : ""
+        },
+        {
+          "yaw": 6.35,
+          "pitch": -0.25,
+          "title": "Three Piece Vase Set",
+          "img_src": "artifacts/vases.jpeg",
+          "text" : "Three piece polychrome delft mantle garniture."
         }
       ]
     },
@@ -846,8 +911,9 @@ var APP_DATA = {
         {
           "yaw" : 2.8,
           "pitch" : 0.2,
-          "title" : "Tooth Key",
-          "text" : "Steel shaft with claw for removing tooth; ivory handled."
+          "title" : "Tooth Key and Surgical Kit",
+          "img_src": "artifacts/kit.jpeg",
+          "text" : "Steel shaft with claw for removing tooth; ivory handled. Next to a pocket surgical kit."
         }
 
       ]
