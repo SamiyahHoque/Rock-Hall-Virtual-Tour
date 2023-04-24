@@ -478,6 +478,7 @@ var APP_DATA = {
           "yaw" : 6.35,
           "pitch" : 6,
           "title" : "Pewter Candlesticks",
+          "img_src": "artifacts/candles.jpeg",
           "text" : "Modern reproduction of 18th century pewter candlesticks."
         },
         {
@@ -536,7 +537,7 @@ var APP_DATA = {
         {
           "yaw" : 8.25,
           "pitch" : 3.1,
-          "title" : "Regency Carved, Ebonized & Gilt Harp",
+          "title" : "Harp",
           "text" : "The Regency Carved, Ebonized and Gilt Harp was manufactured by J.C. Strumpff in London, ca. 1800. It is one of the few original furnishings belonging to the Martin family. The framework consists of a fluted column with a ram's head capital."
         },
         {
@@ -545,6 +546,13 @@ var APP_DATA = {
           "title" : "George III's Piano",
           "img_src": "artifacts/GeorgeIII_Piano.png",
           "text" : "The George III Inlaid Satinwood and Mahogany Broadwood piano forte is dated ca. 1792 and made by Joahannes Broadwood in London. Consists of a plain cross-banded case with a framework of square legs; re-strung for 1975 bicentennial."
+        },
+        {
+          "yaw" : 8.955,
+          "pitch" : 3.1,
+          "title" : "Kettle and Trivet",
+          "img_src": "artifacts/kettle.jpeg",
+          "text" : "A nineteenth century copper and brass kettle. Underneath is an American trivet, circa 1800, made with brass and wrought-iron. Decorated with pierced scalloped apron with cut-out heart."
         }
       ]
     },
@@ -678,7 +686,15 @@ var APP_DATA = {
           "yaw": 6.45,
           "pitch": 0.3,
           "title": "Painted Pine Chess Board",
+          "img_src": "artifacts/chess.jpeg",
           "text": "American Chess Board, dating back to the 19th century. Includes a set of white and red carved ivory chessmen. Chessmen are possibly imported from China, dating back to the late 19th or 20th century."
+        },
+        {
+          "yaw": 3.7,
+          "pitch": 0.25,
+          "title": "Blew Satin Shoes",
+          "img_src": "artifacts/shoes.jpeg",
+          "text" : ""
         }
       ]
     },
@@ -817,12 +833,14 @@ var APP_DATA = {
           "yaw" : 3.27,
           "pitch" : 0.1,
           "title" : "Culpepper Microscope",
+          "img_src": "artifacts/microscope.jpeg",
           "text" : "Possibly made by Benjamin Col. From 1870, brass lacquer finished and mounted on a wooden base with a drawer containing accessories. The whole is contained in a pyramidal box with a metal plaque."
         },
         {
           "yaw" : 3.15,
           "pitch" : 0.2,
           "title" : "Pocket Surgical Set",
+          "img_src": "artifacts/surgery.jpeg",
           "text" : "Made by Tiemann. From 1830, the set consists of a leather wallet with scissors, silver catheter, and four scalpels marked Tiemann with bone handles inside."
         },
         {
