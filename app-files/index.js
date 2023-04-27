@@ -189,6 +189,20 @@
     startAutorotate();
     updateSceneName(scene);
     updateSceneList(scene);
+    
+    var sceneName = document.querySelector('#titleBar .sceneName').innerHTML;
+    var audioBtn = document.getElementById("soundPlay");
+    var audioTextBtn = document.getElementById("audiotxt-btn");
+    console.log('\nSceneName switched to : ' + sceneName + "\n");
+    if(["Girl\'s Bedchamber", "Dr. Samuel Martin\'s Bedchamber", "Family Parlor", "Study", "Hewlett Guest Room" ].includes(sceneName)) {
+      console.log("\n\nScene changed to a room with audio\n\n")
+      audioBtn.style.display = ""; 
+      audioTextBtn.style.display = "";
+    } else {
+      audioBtn.style.display = "none"; 
+      audioTextBtn.style.display = "none";
+    }
+
   }
 
   function updateSceneName(scene) {
