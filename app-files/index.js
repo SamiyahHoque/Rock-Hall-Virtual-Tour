@@ -477,9 +477,6 @@
       default:
         console.log("\n\n No recording for this room....\n\n")
     }
-    //Incomplete
-    //user option to read transcript instead
-    //disable if the current room does not have a recording belonging to it
   });
 
   //audio transcript display button functionality
@@ -495,37 +492,52 @@
     "Study" : "My name is Samuel Martin. This room contains my medical equipment and library.\nUnlike most physicians in the Colonies who were trained by apprenticeship, I earned\nmy medical degree from the preeminent Royal College of Physicians in Edinburgh\n, Scotland. After my graduation in 1765, I returned to Long Island\nand Rock Hall as a physician and gentleman of privilege.\n\nI doctored the countryside, administered medicines, practiced bloodletting, dressed\nwounds, reduced fractures, and performed minor surgery. Some of the drugs that I\nused were made from native and home-grown botanicals. On the table in this room is\nan assortment of medical equipment. The medicine chest room in this contains\nmedicines for common disorders and a set of scales, weights and measuring cups.\nThere is also a brass microscope on the table for the study of tissue and blood; a\ntooth-key for removal of teeth; and a pocket surgical set containing scissors, silver\ncatheter and four scalpels.\n\nEpidemics plagued the colonies and were a constant threat. Among the most dramatic\nand deadly of these diseases was smallpox, diphtheria, measles, scarlet fever,\nwhooping cough, and yellow fever. Quarantine, inoculation and public sanitary\nmeasures were used to control these epidemics.",
 
     "Hewlett Guest Room" : "My name is Thomas Hewlett. As a farmer, just married,\nand learning about the value of marshland, I began to\nacquire land along the seashore. So, when I heard the\nprestigious Rock Hall estate was up for sale, I jumped at\nthe chance to purchase. The circumstances at Rock Hall\nhad become dire after Martin descendant Alice Banister\nMcneill had become terminally ill with breast cancer. Her\nhusband William McNeill had been in Alabama\nestablishing a new life for his Rock Hall family. Upon her\npassing, I purchased Rock Hall and 125 acres for just over\n$5,000. The Hewlett family soon filled the house. Mary and\nI will go on to have 9 children. My parents, Mary's sister\nand family moved in as well.\nWith a substantial mortgage I had to supplement my farm\nincome. With my growing family to support, and the\nincreasing popularity of Far Rockaway beach for seaside\nvacationing, I opened Rock Hall in the summer months to\npaying guests. This breezy, seaside area became a vacation\nspot for fashionable New Yorkers. Only a year after our\narrival, we celebrated our country's national holiday with\nfriends in our new home. On your right, an inscribed glass\nwindow pane from our guest parlor where our friends\netched their names on Independence Day, July 4, 1825.\nThis room is furnished in the style of an 1840 guest room,\ncomplete with provisions for hygiene. These include a\nmodern' bathtub and fancy commode chair."
-
-
-
   };
+
   audioTextBtn.addEventListener("click", function() {
     var sceneName = document.querySelector('#titleBar .sceneName').innerHTML;
     var textBox = document.getElementById("audio-transcript");
     var audiotxt = document.getElementById("audio-txt-paragraph");
     switch (sceneName) {
       case 'Girl\'s Bedchamber':
-        textBox.style.display === "none" ? textBox.style.display = "visible" : textBox.style.display = "none";
-        audiotxt.innerHTML = audioTranscriptDetails[sceneName];
+        if(!audiotxt.innerHTML) {
+          audiotxt.innerHTML = audioTranscriptDetails[sceneName];
+        } else {
+          audiotxt.innerHTML = "";
+        }
         break;
       case 'Dr. Samuel Martin\'s Bedchamber':
-        textBox.style.display === "none" ? textBox.style.display = "visible" : textBox.style.display = "none";
-        audiotxt.innerHTML = audioTranscriptDetails[sceneName];
+        if(!audiotxt.innerHTML) {
+          audiotxt.innerHTML = audioTranscriptDetails[sceneName];
+        } else {
+          audiotxt.innerHTML = "";
+        }
         break;
       case 'Family Parlor':
-        textBox.styles.display === "none" ? textBox.style.display = "visible" : textBox.style.display = "none";
-        audiotxt.innerHTML = audioTranscriptDetails[sceneName];
+        if(!audiotxt.innerHTML) {
+          audiotxt.innerHTML = audioTranscriptDetails[sceneName];
+        } else {
+          audiotxt.innerHTML = "";
+        }
         break;
       case 'Study':
-        textBox.style.display === "none" ? textBox.style.display = "visible" : textBox.style.display = "none";
-        audiotxt.innerHTML = audioTranscriptDetails[sceneName];
+        if(!audiotxt.innerHTML) {
+          audiotxt.innerHTML = audioTranscriptDetails[sceneName];
+        } else {
+          audiotxt.innerHTML = "";
+        }
         break;
       case 'Hewlett Guest Room':
-        textBox.style.display === "none" ? textBox.style.display = "visible" : textBox.style.display = "none";
-        audiotxt.innerHTML = audioTranscriptDetails[sceneName];
+        if(!audiotxt.innerHTML) {
+          audiotxt.innerHTML = audioTranscriptDetails[sceneName];
+        } else {
+          audiotxt.innerHTML = "";
+        }
         break;
       default:
-        if(textBox.style.display != "none") textBox.style.display = "none";
+        if(audiotxt.innerHTML) {
+          audiotxt.innerHTML = "";
+        }
         console.log("\n\n No text bc no recording for this room....\n\n")
     }
   });
