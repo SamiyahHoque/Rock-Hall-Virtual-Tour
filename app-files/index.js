@@ -187,22 +187,45 @@
     scene.view.setParameters(scene.data.initialViewParameters);
     scene.scene.switchTo();
     startAutorotate();
+    var previousSceneName = document.querySelector('#titleBar .sceneName').innerHTML;
+    console.log("\n\npreviousSceneName: ", previousSceneName, "\n\n")
     updateSceneName(scene);
     updateSceneList(scene);
     
+    // Show audio and audio transcript buttons only in rooms with audio
     var sceneName = document.querySelector('#titleBar .sceneName').innerHTML;
     var audioBtn = document.getElementById("soundPlay");
     var audioTextBtn = document.getElementById("audiotxt-btn");
+    var audioTextBox = document.getElementById("audio-transcript");
+    var audioTxt = document.getElementById("audio-txt-paragraph")
     console.log('\nSceneName switched to : ' + sceneName + "\n");
     if(["Girl\'s Bedchamber", "Dr. Samuel Martin\'s Bedchamber", "Family Parlor", "Study", "Hewlett Guest Room" ].includes(sceneName)) {
       console.log("\n\nScene changed to a room with audio\n\n")
       audioBtn.style.display = ""; 
       audioTextBtn.style.display = "";
+      audioTextBox.style.display = "";
     } else {
       audioBtn.style.display = "none"; 
       audioTextBtn.style.display = "none";
+      audioTextBox.style.display = "none";
+      audioTxt.innerHTML = "";
     }
 
+
+    //For any scene change, pause and reset all audio elements 
+    if(previousSceneName != sceneName) {
+      var girlsBedchamberAudio = document.getElementById("Girls-audio");
+      var samuelAudio = document.getElementById("Samuel-audio");
+      var familyParlorAudio = document.getElementById("Parlor-audio");
+      var studyAudio = document.getElementById("Study-audio");
+      var hewlettAudio = document.getElementById("Hewlett-audio");
+      var audioArr = [girlsBedchamberAudio, samuelAudio, familyParlorAudio, studyAudio, hewlettAudio];
+      for (var i = 0; i < audioArr.length; i=i+1) {
+        audioArr[i].pause();
+        audioArr[i].currentTime = 0;
+      }
+    }
+    
   }
 
   function updateSceneName(scene) {
@@ -493,22 +516,26 @@
     }
   });
 
-  //audio transcript display button functionality
 
   var audioTextBtn = document.getElementById("audiotxt-btn");
-  const audioTranscriptDetails = {
-    "Girl\'s Bedchamber" : "My name is Alice. My mother, Rachel Martin met\nThomas Banister, a loyalist from Rhode Island while\nhe was serving in a militia near our home during the\nRevolutionary War. My grandparents approved and\nthey were soon married. My father and Uncle Samuel\nwould become close, life-long friends.\nGrowing up at Rock Hall, my brothers attended\nprivate schools where they studied a wide variety of\nsubjects that included Latin, literature, poetry and\nscience. I, like most young ladies of the time, was\neducated at home. Fortunately, I was able to attend a\nfinishing school where I learned female\naccomplishments. These included music, dance, art,\nand stitchery.\nI completed this silk-embroidered sampler you see on\nyour left in 1797 when I was only ten years old.\nStitchery would prepare me for running Proper\nHousehold - making clothing, linens and\nbedhangings.\nAt 19, I married William McNeill and together we\nhave seven children. My family will be the last of the\nMartins to reside at this beautiful estate.",
+  audioTextBtn.addEventListener("click", displayAudioTranscript);
 
-    "Dr. Samuel Martin\'s Bedchamber" : "I am Samuel Martin. The year is 1805. When my father Josiah died in 1778, I, his eldest\nson, inherited the plantation in Antigua [an-tee-guh] and the Rock Hall property.\nAs head of the household, I used this bedchamber for my rest. My new bedcurtains\nhave just arrived! The fabric is green wool moreen. I can draw these curtains up with a\nstring or let them down for privacy and warmth. The sea chest in this room is a family\nheirloom and dates to approximately 1700.\nThe war is long over now and life is good here. We have all that we need. The barn\nhouses 2 English bulls and 4 English cows. There are 32 sheep and 18 lambs. Grazing\nin the fields are cows and heifers. We own hogs, pigs, fowl, turkey, ducks and geese. To\nthe east the carriage house has wagons, carriages and a sulky, as well as sleds and sleighs.\nIn my will of 1802, I provided that Rock Hall would pass to my sisters Alice and Rachel.\nThe plantation in Antigua [an-tee-guh] is bequeathed to my brother William in England,\nwith all money and my library. I will free the children of “my late mulatto woman Molly”\nand I will provide by practical and caring means for their adult lives.",
+  function displayAudioTranscript() {
+    //audio transcript display button functionality
+    
+    const audioTranscriptDetails = {
+      "Girl\'s Bedchamber" : "My name is Alice. My mother, Rachel Martin met\nThomas Banister, a loyalist from Rhode Island while\nhe was serving in a militia near our home during the\nRevolutionary War. My grandparents approved and\nthey were soon married. My father and Uncle Samuel\nwould become close, life-long friends.\nGrowing up at Rock Hall, my brothers attended\nprivate schools where they studied a wide variety of\nsubjects that included Latin, literature, poetry and\nscience. I, like most young ladies of the time, was\neducated at home. Fortunately, I was able to attend a\nfinishing school where I learned female\naccomplishments. These included music, dance, art,\nand stitchery.\nI completed this silk-embroidered sampler you see on\nyour left in 1797 when I was only ten years old.\nStitchery would prepare me for running Proper\nHousehold - making clothing, linens and\nbedhangings.\nAt 19, I married William McNeill and together we\nhave seven children. My family will be the last of the\nMartins to reside at this beautiful estate.",
 
-    "Family Parlor" : "This family parlor reflects a multi-purpose room where the head of the household,\nJosiah Martin, and later Doctor Samuel Martin, could tend to both the Rock Hall estate\nand the Antiguan plantation in the West Indies. Cargo ships loaded with\nbarrels of sugar were undoubtedly tracked as they traveled from the West Indies to New\nYork Harbor, where the sugar found its market. Those same ships were then loaded with provisions and sent back to the Martin\'s West Indian plantation. The record\nkeeping and management of the Martin estates may have taken place at a secretary desk\nlike this one. In the evening, this same room may have been used for informal\ngatherings and recreational games.\nLocated in this room are the original keys from Rock Hall and prints of King George\nIII and Queen Charlotte.\nThe mantel and moldings in this room and other rooms on the east side of the house\ncontain the original 1767 Georgian style.",
+      "Dr. Samuel Martin\'s Bedchamber" : "I am Samuel Martin. The year is 1805. When my father Josiah died in 1778, I, his eldest\nson, inherited the plantation in Antigua [an-tee-guh] and the Rock Hall property.\nAs head of the household, I used this bedchamber for my rest. My new bedcurtains\nhave just arrived! The fabric is green wool moreen. I can draw these curtains up with a\nstring or let them down for privacy and warmth. The sea chest in this room is a family\nheirloom and dates to approximately 1700.\nThe war is long over now and life is good here. We have all that we need. The barn\nhouses 2 English bulls and 4 English cows. There are 32 sheep and 18 lambs. Grazing\nin the fields are cows and heifers. We own hogs, pigs, fowl, turkey, ducks and geese. To\nthe east the carriage house has wagons, carriages and a sulky, as well as sleds and sleighs.\nIn my will of 1802, I provided that Rock Hall would pass to my sisters Alice and Rachel.\nThe plantation in Antigua [an-tee-guh] is bequeathed to my brother William in England,\nwith all money and my library. I will free the children of “my late mulatto woman Molly”\nand I will provide by practical and caring means for their adult lives.",
 
-    "Study" : "My name is Samuel Martin. This room contains my medical equipment and library.\nUnlike most physicians in the Colonies who were trained by apprenticeship, I earned\nmy medical degree from the preeminent Royal College of Physicians in Edinburgh\n, Scotland. After my graduation in 1765, I returned to Long Island\nand Rock Hall as a physician and gentleman of privilege.\n\nI doctored the countryside, administered medicines, practiced bloodletting, dressed\nwounds, reduced fractures, and performed minor surgery. Some of the drugs that I\nused were made from native and home-grown botanicals. On the table in this room is\nan assortment of medical equipment. The medicine chest room in this contains\nmedicines for common disorders and a set of scales, weights and measuring cups.\nThere is also a brass microscope on the table for the study of tissue and blood; a\ntooth-key for removal of teeth; and a pocket surgical set containing scissors, silver\ncatheter and four scalpels.\n\nEpidemics plagued the colonies and were a constant threat. Among the most dramatic\nand deadly of these diseases was smallpox, diphtheria, measles, scarlet fever,\nwhooping cough, and yellow fever. Quarantine, inoculation and public sanitary\nmeasures were used to control these epidemics.",
+      "Family Parlor" : "This family parlor reflects a multi-purpose room where the head of the household,\nJosiah Martin, and later Doctor Samuel Martin, could tend to both the Rock Hall estate\nand the Antiguan plantation in the West Indies. Cargo ships loaded with\nbarrels of sugar were undoubtedly tracked as they traveled from the West Indies to New\nYork Harbor, where the sugar found its market. Those same ships were then loaded with provisions and sent back to the Martin\'s West Indian plantation. The record\nkeeping and management of the Martin estates may have taken place at a secretary desk\nlike this one. In the evening, this same room may have been used for informal\ngatherings and recreational games.\nLocated in this room are the original keys from Rock Hall and prints of King George\nIII and Queen Charlotte.\nThe mantel and moldings in this room and other rooms on the east side of the house\ncontain the original 1767 Georgian style.",
 
-    "Hewlett Guest Room" : "My name is Thomas Hewlett. As a farmer, just married,\nand learning about the value of marshland, I began to\nacquire land along the seashore. So, when I heard the\nprestigious Rock Hall estate was up for sale, I jumped at\nthe chance to purchase. The circumstances at Rock Hall\nhad become dire after Martin descendant Alice Banister\nMcneill had become terminally ill with breast cancer. Her\nhusband William McNeill had been in Alabama\nestablishing a new life for his Rock Hall family. Upon her\npassing, I purchased Rock Hall and 125 acres for just over\n$5,000. The Hewlett family soon filled the house. Mary and\nI will go on to have 9 children. My parents, Mary's sister\nand family moved in as well.\nWith a substantial mortgage I had to supplement my farm\nincome. With my growing family to support, and the\nincreasing popularity of Far Rockaway beach for seaside\nvacationing, I opened Rock Hall in the summer months to\npaying guests. This breezy, seaside area became a vacation\nspot for fashionable New Yorkers. Only a year after our\narrival, we celebrated our country's national holiday with\nfriends in our new home. On your right, an inscribed glass\nwindow pane from our guest parlor where our friends\netched their names on Independence Day, July 4, 1825.\nThis room is furnished in the style of an 1840 guest room,\ncomplete with provisions for hygiene. These include a\nmodern' bathtub and fancy commode chair."
-  };
+      "Study" : "My name is Samuel Martin. This room contains my medical equipment and library.\nUnlike most physicians in the Colonies who were trained by apprenticeship, I earned\nmy medical degree from the preeminent Royal College of Physicians in Edinburgh\n, Scotland. After my graduation in 1765, I returned to Long Island\nand Rock Hall as a physician and gentleman of privilege.\n\nI doctored the countryside, administered medicines, practiced bloodletting, dressed\nwounds, reduced fractures, and performed minor surgery. Some of the drugs that I\nused were made from native and home-grown botanicals. On the table in this room is\nan assortment of medical equipment. The medicine chest room in this contains\nmedicines for common disorders and a set of scales, weights and measuring cups.\nThere is also a brass microscope on the table for the study of tissue and blood; a\ntooth-key for removal of teeth; and a pocket surgical set containing scissors, silver\ncatheter and four scalpels.\n\nEpidemics plagued the colonies and were a constant threat. Among the most dramatic\nand deadly of these diseases was smallpox, diphtheria, measles, scarlet fever,\nwhooping cough, and yellow fever. Quarantine, inoculation and public sanitary\nmeasures were used to control these epidemics.",
 
-  audioTextBtn.addEventListener("click", function() {
+      "Hewlett Guest Room" : "My name is Thomas Hewlett. As a farmer, just married,\nand learning about the value of marshland, I began to\nacquire land along the seashore. So, when I heard the\nprestigious Rock Hall estate was up for sale, I jumped at\nthe chance to purchase. The circumstances at Rock Hall\nhad become dire after Martin descendant Alice Banister\nMcneill had become terminally ill with breast cancer. Her\nhusband William McNeill had been in Alabama\nestablishing a new life for his Rock Hall family. Upon her\npassing, I purchased Rock Hall and 125 acres for just over\n$5,000. The Hewlett family soon filled the house. Mary and\nI will go on to have 9 children. My parents, Mary's sister\nand family moved in as well.\nWith a substantial mortgage I had to supplement my farm\nincome. With my growing family to support, and the\nincreasing popularity of Far Rockaway beach for seaside\nvacationing, I opened Rock Hall in the summer months to\npaying guests. This breezy, seaside area became a vacation\nspot for fashionable New Yorkers. Only a year after our\narrival, we celebrated our country's national holiday with\nfriends in our new home. On your right, an inscribed glass\nwindow pane from our guest parlor where our friends\netched their names on Independence Day, July 4, 1825.\nThis room is furnished in the style of an 1840 guest room,\ncomplete with provisions for hygiene. These include a\nmodern' bathtub and fancy commode chair."
+    };
+
+
     var sceneName = document.querySelector('#titleBar .sceneName').innerHTML;
     var textBox = document.getElementById("audio-transcript");
     var audiotxt = document.getElementById("audio-txt-paragraph");
@@ -554,7 +581,7 @@
         }
         console.log("\n\n No text bc no recording for this room....\n\n")
     }
-  });
+  }
 
   // function highlightCtrlBtn(id) {
   //   var button = document.getElementById(id);
