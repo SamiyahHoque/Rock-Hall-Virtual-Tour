@@ -208,9 +208,9 @@
       audioBtn.style.display = "none"; 
       audioTextBtn.style.display = "none";
       audioTextBox.style.display = "none";
-      audioTxt.innerHTML = "";
     }
-
+    // set audio text to an empty string every time the user changes the room/scene
+    audioTxt.innerHTML = "";
 
     //For any scene change, pause and reset all audio elements 
     if(previousSceneName != sceneName) {
