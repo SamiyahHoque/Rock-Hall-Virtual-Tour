@@ -202,6 +202,119 @@ body.fullscreen-enabled.mobile #autorotateToggle {
   display: none;
 }
 
+
+#audiotxt-btn {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 50;
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  background-color: rgb(103,115,131);
+  background-color: rgba(103,115,131,0.8);
+}
+
+.mobile #audiotxt-btn {
+  width: 50px;
+  height: 50px;
+}
+
+/* If there is a fullscreen button, must placed a bit to the left */
+body.fullscreen-enabled #audiotxt-btn {
+  right: 40px;
+}
+
+body.fullscreen-enabled.mobile #audiotxt-btn {
+  right: 50px;
+}
+
+#audiotxt-btn .icon {
+  position: absolute;
+  top: 5px;
+  right: 50px;
+  width: 30px;
+  height: 30px;
+}
+
+.mobile #audiotxt-btn .icon {
+  top: 10px;
+  right: 60px;
+}
+
+#audiotxt-btn .icon.on {
+  display: none;
+}
+
+#audiotxt-btn .icon.off {
+  display: block;
+}
+
+#audiotxt-btn.enabled .icon.on {
+  display: block;
+}
+
+#audiotxt-btn.enabled .icon.off {
+  display: none;
+}
+
+
+#soundPlay {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 50;
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  background-color: rgb(103,115,131);
+  background-color: rgba(103,115,131,0.8);
+}
+
+.mobile #soundPlay {
+  width: 50px;
+  height: 50px;
+}
+
+/* If there is a fullscreen button, must placed a bit to the left */
+body.fullscreen-enabled #soundPlay {
+  right: 40px;
+}
+
+body.fullscreen-enabled.mobile #soundPlay {
+  right: 50px;
+}
+
+#soundPlay .icon {
+  position: absolute;
+  top: 5px;
+  right: 90px;
+  width: 30px;
+  height: 30px;
+}
+
+.mobile #soundPlay .icon {
+  top: 10px;
+  right: 355px;
+}
+
+#soundPlay .icon.on {
+  display: none;
+}
+
+#soundPlay .icon.off {
+  display: block;
+}
+
+#soundPlay.enabled .icon.on {
+  display: block;
+}
+
+#soundPlay.enabled .icon.off {
+  display: none;
+}
+
+
 #sceneListToggle {
   position: absolute;
   top: 0;
@@ -855,11 +968,27 @@ body.view-control-buttons .viewControlButton {
   font-size: 26.5px;
   word-spacing: 4px;
   position: absolute;
+  padding: 5px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: rgb(103,115,131);
   background-color: rgba(103,115,131,0.8);
+}
+
+/* Styles for mobile screens */
+@media only screen and (max-width: 767px) {
+  #audio-txt-paragraph {
+    width: 300px; 
+    /* height: 400px; */
+    overflow-y: auto;
+    overflow-x: auto;
+    
+    /* overflow-x: scroll; */
+    /* text-overflow: ellipsis;  */
+    white-space: wrap; 
+    word-wrap: break-word;
+  }
 }
 
 
