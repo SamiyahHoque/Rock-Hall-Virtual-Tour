@@ -6,6 +6,7 @@
 <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
 <style> @-ms-viewport { width: device-width; } </style>
 <link rel="stylesheet" href="vendor/reset.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=EB+Garamond">
 <link rel="stylesheet" href="style.css">
 </head>
 <body class="multiple-scenes view-control-buttons">
@@ -109,6 +110,12 @@
   <img class="icon on" src="img/collapse.png">
 </a>
 
+
+<div id="audio-transcript">
+  <!-- <h2 id="audio-txt-title"></h2> -->
+  <p id="audio-txt-paragraph"></p>
+</div>
+
 <a href="javascript:void(0)" id="viewUp" class="viewControlButton viewControlButton-1">
   <img class="icon" src="img/up.png">
 </a>
@@ -131,7 +138,9 @@
   <!-- <img class="icon" src="img/sound.png"> -->
   <img class="icon" src="img/sound.png">
 </a>
-<button id="toggle-btn" class="viewControlButton viewControlButton-8">Audio Text</button>
+<a href="javascript:void(0)" id="audiotxt-btn" class="viewControlButton viewControlButton-8">
+  <img class="icon" src="img/text.png">
+</a>
 
 
 

@@ -496,6 +496,11 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   height: 40px;
 }
 
+.info-hotspot .info-hotspot-icon-wrapper {
+  width: 40px;
+  height: 40px;
+}
+
 .mobile .info-hotspot .info-hotspot-icon-wrapper {
   width: 50px;
   height: 50px;
@@ -505,6 +510,14 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   width: 90%;
   height: 90%;
   margin: 5%;
+}
+
+.info-hotspot .info-hotspot-image {
+  width: 250px;
+  border-radius: 8px;
+  /* overflow: hidden; */
+  height: auto;
+  max-height: 200px;
 }
 
 .info-hotspot .info-hotspot-title-wrapper {
@@ -813,33 +826,42 @@ body.view-control-buttons .viewControlButton {
 
 /* Center is at margin-left: -20px */
 .viewControlButton-1 {
-  margin-left: -145px;
+  margin-left: -175px;
 }
 .viewControlButton-2 {
-  margin-left: -95px;
+  margin-left: -125px;
 }
 .viewControlButton-3 {
-  margin-left: -45px;
+  margin-left: -75px;
 }
 .viewControlButton-4 {
-  margin-left: 5px;
+  margin-left: -25px;
 }
 .viewControlButton-5 {
-  margin-left: 55px;
+  margin-left: 25px;
 }
 .viewControlButton-6 {
-  margin-left: 105px;
+  margin-left: 75px;
 }
 .viewControlButton-7 {
-  margin-left: 155px;
+  margin-left: 125px;
 }
 .viewControlButton-8 {
-  margin-left: 205px;
+  margin-left: 175px;
 }
 
-.hidden {
-  display: none;
+
+#audio-transcript {
+  font-size: 26.5px;
+  word-spacing: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(103,115,131);
+  background-color: rgba(103,115,131,0.8);
 }
+
 
 /* STYLES FOR LANDING SCREEN */
 .intro{
