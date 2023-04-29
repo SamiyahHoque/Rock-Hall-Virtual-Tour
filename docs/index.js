@@ -211,6 +211,7 @@
     }
     // set audio text to an empty string every time the user changes the room/scene
     audioTxt.innerHTML = "";
+    audioTextBox.style.display = "none";
 
     //For any scene change, pause and reset all audio elements 
     if(previousSceneName != sceneName) {
@@ -539,58 +540,16 @@
     var sceneName = document.querySelector('#titleBar .sceneName').innerHTML;
     var textBox = document.getElementById("audio-transcript");
     var audiotxt = document.getElementById("audio-txt-paragraph");
-    switch (sceneName) {
-      case 'Girl\'s Bedchamber':
-        if(!audiotxt.innerHTML) {
-          audiotxt.innerHTML = audioTranscriptDetails[sceneName];
-        } else {
-          audiotxt.innerHTML = "";
-        }
-        break;
-      case 'Dr. Samuel Martin\'s Bedchamber':
-        if(!audiotxt.innerHTML) {
-          audiotxt.innerHTML = audioTranscriptDetails[sceneName];
-        } else {
-          audiotxt.innerHTML = "";
-        }
-        break;
-      case 'Family Parlor':
-        if(!audiotxt.innerHTML) {
-          audiotxt.innerHTML = audioTranscriptDetails[sceneName];
-        } else {
-          audiotxt.innerHTML = "";
-        }
-        break;
-      case 'Study':
-        if(!audiotxt.innerHTML) {
-          audiotxt.innerHTML = audioTranscriptDetails[sceneName];
-        } else {
-          audiotxt.innerHTML = "";
-        }
-        break;
-      case 'Hewlett Guest Room':
-        if(!audiotxt.innerHTML) {
-          audiotxt.innerHTML = audioTranscriptDetails[sceneName];
-        } else {
-          audiotxt.innerHTML = "";
-        }
-        break;
-      default:
-        if(audiotxt.innerHTML) {
-          audiotxt.innerHTML = "";
-        }
-        console.log("\n\n No text bc no recording for this room....\n\n")
+    
+    if(!audiotxt.innerHTML) {
+      audiotxt.innerHTML = audioTranscriptDetails[sceneName];
+      textBox.style.display = "";
+    } else {
+      audiotxt.innerHTML = "";
+      textBox.style.display = "none";
     }
+      
   }
-
-  // function highlightCtrlBtn(id) {
-  //   var button = document.getElementById(id);
-  //   button.classList.add("clicked");
-  //   setTimeout(function() {
-  //     button.classList.remove("clicked");
-  //   }, 200);
-  // }
-
   // Display the initial scene.
   switchScene(scenes[1]);
 
