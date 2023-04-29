@@ -338,7 +338,21 @@
       img_property.src = hotspot.img_src;
       img_property.classList.add('info-hotspot-image');
       img_src.appendChild(img_property);
-      // if image exists, append to text elem
+      //if image exists, append to text elem
+      // var modal = document.createElement("div");
+      // img_src.onclick = function(){
+      //   modal.style.display = "block";
+      // }
+      // var button = document.createElement("button");
+      // var span = document.createElement("span");
+      // span.innerHTML = "&times;";
+      // button.data_close = true;
+      // span.onclick = function() {
+      //   modal.style.display = "none";
+      // }
+      // button.appendChild(span);
+      // modal.appendChild(button);
+      // document.body.appendChild(modal);
       text.appendChild(img_src);
     }
 
