@@ -591,6 +591,7 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
               border-radius 0.3s ease-in-out;
 }
 
+/*CSS for header when hotspot is visible (clicked on and opended) on PC*/
 .desktop .info-hotspot.visible .info-hotspot-header,
 .desktop.no-touch .info-hotspot.visible .info-hotspot-header:hover {
   width: 300px;
@@ -983,6 +984,85 @@ body.view-control-buttons .viewControlButton {
   margin-left: 175px;
 }
 
+.desktop #image-wrapper {
+  display: none;
+}
+
+.desktop  #image-wrapper.visible {
+  display: block;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+
+  width: 50%;
+  min-height: fit-content;
+  max-height: fit-content;
+  
+  padding: 5px;
+  border-right: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  background-color: rgba(103,115,131,0.8);
+}
+
+.desktop  #image-wrapper.visible .image-header {
+  min-height: 40px;
+  max-height: fit-content;
+  background-color: #3d3c3c;
+}
+
+.desktop  #image-wrapper.visible .header-text {
+  /*font type and spacing*/
+  font-size: 26.5px;
+  word-spacing: 4px;
+  
+  /*Used to center text*/
+  text-align: center;
+  position: relative;
+  top: 50%;
+
+  max-height: fit-content;
+}
+
+.desktop  #image-wrapper.visible .header-close {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  height: 40px;
+  width: 40px;
+  background-color: #3d3c3c;
+}
+
+.desktop  #image-wrapper.visible .image-body {
+  background-color: #302c2c;
+  height: max-content;
+  margin-top: 0;
+  overflow: auto;
+}
+
+.desktop  #image-wrapper.visible .body-container {
+  display: block;
+  overflow: auto;
+}
+
+.desktop  #image-wrapper.visible .body-container-image {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  overflow: auto;
+}
+
+.desktop  #image-wrapper.visible .body-image {
+  max-width: 50%;
+  max-height: 50%;
+  padding: 10px;
+}
+
+.desktop  #image-wrapper.visible .body-text {
+  font-size: 26.5px;
+  word-spacing: 4px;
+  padding: 5px;
+  text-align: center;
+}
 
 #audio-transcript {
   font-size: 26.5px;

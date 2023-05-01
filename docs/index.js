@@ -182,6 +182,9 @@
     return s.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;');
   }
 
+  //Need to store it here so it won't refresh every time an info hotspot is created (when it is clicked)
+  var previousHotspot = null;
+
   function switchScene(scene) {
     stopAutorotate();
     scene.view.setParameters(scene.data.initialViewParameters);
@@ -225,6 +228,10 @@
         audioArr[i].pause();
         audioArr[i].currentTime = 0;
       }
+      //Reset all image hotspot elements
+      var imageWrapper = document.getElementById('image-wrapper');
+      imageWrapper.classList.toggle("visible", false);
+      resetHotSpotValues(imageWrapper);
     }
     
   }
@@ -410,17 +417,108 @@
       modal.classList.toggle('visible');
     };
 
+    //Only exists within this function- remember that!
+    var imageWrapper = document.getElementById('image-wrapper');
+    var bodyContainer = imageWrapper.querySelector('.body-container');
+
+    var headerCloseIcon = imageWrapper.querySelector('.header-close');
+    headerCloseIcon.src ="img/close.png";
+
     // Show content when hotspot is clicked.
-    wrapper.querySelector('.info-hotspot-header').addEventListener('click', toggle);
+    wrapper.querySelector('.info-hotspot-header').addEventListener('click', function() {
+      //hotspot = refers to desktop version of hotspot info
+      //modal = referst to mobile version of hotspot info (fade in one rather than drop down)
+      //Used to modify how things should appear on various devices
+      //visible- used to toggle on/off the various visible subclasses of CSS elements
+      //When creating elements, need to have an parent HTML element that child element can attach itself to
+      console.log("BEFORE CLICK!");
+      if(previousHotspot === null) {
+        console.log("Previous Hotspot is: NULL");
+      }
+      else {
+        console.log("Previous Hotspot is:"+previousHotspot.title);
+      }
+      console.log("Current Hotspot is:"+hotspot.title);
+
+      //If hotspot being clicked on is the same one that the user clicked on before, just toggle it, else update values to new hotspot
+      if(previousHotspot !== null && previousHotspot.title === hotspot.title) {
+        document.getElementById("image-wrapper").classList.toggle("visible");
+      }
+      else {
+        //At this point, either clicking on a hotspot for the first time or clicking on a different one compared to the last
+        //Reset info from previous hotspot
+        console.log(imageWrapper);
+        resetHotSpotValues(imageWrapper);
+      
+        //At this point, image wrapper should have default values- now get updated info
+        var headerText = imageWrapper.querySelector('.header-text');
+        headerText.innerHTML = hotspot.title;
+
+        //Setting up content of body of hotspot
+        var imageElement = bodyContainer.querySelector(".body-image");
+        if(hotspot.hasOwnProperty("img_src")) {
+          imageWrapper.style.top = "10%";
+          bodyContainer.classList.replace("body-container", "body-container-image");
+          imageElement = bodyContainer.querySelector(".body-image");
+          imageElement.src = hotspot.img_src
+        }
+
+        var bodyText = bodyContainer.getElementsByClassName("body-text")[0];
+        bodyText.innerHTML = hotspot.text;
+        
+        previousHotspot = hotspot;
+        document.getElementById("image-wrapper").classList.toggle("visible", true);
+        
+        console.log("AFTER CLICK!");
+        if(previousHotspot === null) {
+          console.log("Previous Hotspot is: NULL");
+        }
+        else {
+          console.log("Previous Hotspot is:"+previousHotspot.title);
+        }
+          console.log("Current Hotspot is:"+hotspot.title);
+        }              
+    });
+
+    document.body.querySelector(".header-close").addEventListener("click", function() {
+      imageWrapper.classList.toggle("visible", false);
+    })
 
     // Hide content when close icon is clicked.
-    modal.querySelector('.info-hotspot-close-wrapper').addEventListener('click', toggle);
+    modal.querySelector(".info-hotspot-close-wrapper").addEventListener("click", toggle);
 
     // Prevent touch and scroll events from reaching the parent element.
     // This prevents the view control logic from interfering with the hotspot.
     stopTouchAndScrollEventPropagation(wrapper);
 
     return wrapper;
+  }
+
+  function getBodyContainer(imageWrapper) {
+    var bodyContainer = imageWrapper.querySelector('.body-container-image');
+    if(bodyContainer === null) {
+      return imageWrapper.querySelector('.body-container');
+    }
+    else {
+      return imageWrapper.querySelector('.body-container-image');
+    }
+  }
+
+  function resetHotSpotValues(imageWrapper) {
+    imageWrapper.style.top = "25%";
+    var headerText = imageWrapper.querySelector('.header-text');
+    headerText.innerHTML = "";
+    var bodyContainer = getBodyContainer(imageWrapper);
+    console.log(bodyContainer);
+    if(bodyContainer.className === "body-container-image") {
+      bodyContainer.classList.replace("body-container-image", "body-container");
+      var imageElement = bodyContainer.querySelector(".body-image");
+      imageElement.src = "";   
+    }
+    else {
+      var bodyText = bodyContainer.querySelector('.body-text');
+      bodyText.innerHTML = "";
+    }
   }
 
   // Prevent touch and scroll events from reaching the parent element.
@@ -550,6 +648,11 @@
       "Hewlett Guest Room" : "My name is Thomas Hewlett. As a farmer, just married,\nand learning about the value of marshland, I began to\nacquire land along the seashore. So, when I heard the\nprestigious Rock Hall estate was up for sale, I jumped at\nthe chance to purchase. The circumstances at Rock Hall\nhad become dire after Martin descendant Alice Banister\nMcneill had become terminally ill with breast cancer. Her\nhusband William McNeill had been in Alabama\nestablishing a new life for his Rock Hall family. Upon her\npassing, I purchased Rock Hall and 125 acres for just over\n$5,000. The Hewlett family soon filled the house. Mary and\nI will go on to have 9 children. My parents, Mary's sister\nand family moved in as well.\nWith a substantial mortgage I had to supplement my farm\nincome. With my growing family to support, and the\nincreasing popularity of Far Rockaway beach for seaside\nvacationing, I opened Rock Hall in the summer months to\npaying guests. This breezy, seaside area became a vacation\nspot for fashionable New Yorkers. Only a year after our\narrival, we celebrated our country's national holiday with\nfriends in our new home. On your right, an inscribed glass\nwindow pane from our guest parlor where our friends\netched their names on Independence Day, July 4, 1825.\nThis room is furnished in the style of an 1840 guest room,\ncomplete with provisions for hygiene. These include a\nmodern' bathtub and fancy commode chair."
     };
 
+
+      //Reset all image hotspot elements
+    var imageWrapper = document.getElementById('image-wrapper');
+    imageWrapper.classList.toggle("visible", false);
+    resetHotSpotValues(imageWrapper);
 
     var sceneName = document.querySelector('#titleBar .sceneName').innerHTML;
     var textBox = document.getElementById("audio-transcript");
