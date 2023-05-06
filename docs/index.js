@@ -426,11 +426,21 @@
 
     // Show content when hotspot is clicked.
     wrapper.querySelector('.info-hotspot-header').addEventListener('click', function() {
-      //hotspot = refers to desktop version of hotspot info
-      //modal = referst to mobile version of hotspot info (fade in one rather than drop down)
-      //Used to modify how things should appear on various devices
-      //visible- used to toggle on/off the various visible subclasses of CSS elements
-      //When creating elements, need to have an parent HTML element that child element can attach itself to
+      /*hotspot = refers to desktop version of hotspot info
+        modal = referst to mobile version of hotspot info (fade in one rather than drop down)
+        Used to modify how things should appear on various devices
+        visible- used to toggle on/off the various visible subclasses of CSS elements
+        When creating elements, need to have an parent HTML element that child element can attach itself to
+      */
+
+      /*
+        When the data of a hotspot is already being displayed on-screen and the user clicks a hotspot, two scenarios can happen:
+          1. The user clicks the same hotspot that is currently displaying its information
+          2. The user clicks on a different hotspot (this includes when the user clicks on a hotspot for the first time at all)
+          By keeping track of the previous hotspot, can account for both these scenarios
+
+      */
+
       console.log("BEFORE CLICK!");
       if(previousHotspot === null) {
         console.log("Previous Hotspot is: NULL");
@@ -456,11 +466,12 @@
         console.log(imageWrapper);
         resetHotSpotValues(imageWrapper);
       
-        //At this point, image wrapper should have default values- now get updated info
+        //Image wrapper should have default values- now get updated info
         var headerText = imageWrapper.querySelector('.header-text');
         headerText.innerHTML = hotspot.title;
 
         //Setting up content of body of hotspot
+        //Updating body content's CSS class if it has an image
         var imageElement = bodyContainer.querySelector(".body-image");
         if(hotspot.hasOwnProperty("img_src")) {
           imageWrapper.style.top = "10%";
@@ -486,6 +497,7 @@
         }              
     });
 
+    //If the user were to click the X on the hotspot's window, hide it (make visible false)
     document.body.querySelector(".header-close").addEventListener("click", function() {
       imageWrapper.classList.toggle("visible", false);
     })
@@ -510,6 +522,13 @@
     }
   }
 
+  /***
+   * Used to reset the HTML and CSS values/classes of the imageWrapper container back to its default values
+   * (being formatted for a hotspot with just text).
+   * 
+   * This is to make it so that when updating these values for the new hotspot being clicked, it can
+   * start from the same base values. (won't get error for trying to find wrong class for bodyContainer)
+   */
   function resetHotSpotValues(imageWrapper) {
     imageWrapper.style.top = "25%";
     var headerText = imageWrapper.querySelector('.header-text');
