@@ -440,6 +440,12 @@
       }
       console.log("Current Hotspot is:"+hotspot.title);
 
+      //If audio transcript box is currently open, close it
+      var audiotxt = document.getElementById("audio-txt-paragraph");
+      if(audiotxt.innerHTML) {
+        audiotxt.innerHTML = "";
+      }
+      
       //If hotspot being clicked on is the same one that the user clicked on before, just toggle it, else update values to new hotspot
       if(previousHotspot !== null && previousHotspot.title === hotspot.title) {
         document.getElementById("image-wrapper").classList.toggle("visible");
@@ -649,9 +655,15 @@
     };
 
 
-      //Reset all image hotspot elements
+    //Reset all image hotspot elements and close hotspot window if it is currently open
     var imageWrapper = document.getElementById('image-wrapper');
     imageWrapper.classList.toggle("visible", false);
+    /*
+      As the hotspot window's values are being completely reset, the current information being displayed will be erased
+      To load it again if the user were to click on it after closing the audio transcript window, treat it like if the user
+      was clicking on any hotspot for the first time
+    */
+    previousHotspot = null;
     resetHotSpotValues(imageWrapper);
 
     var sceneName = document.querySelector('#titleBar .sceneName').innerHTML;
